@@ -7,11 +7,16 @@ var app = function (spriteFactory, colorFactory) {
         ai = levelOne.ai,
         body = document.getElementById('game');
     
+    function detectCollisions(level) {
+        
+    }
+    
     function update() {
         requestAnimFrame(update);
         renderer.render(levelOne.stage);
         ball.update();
         player1.update(levelOne.stage.interactionManager.mouse.global);
+        detectCollisions(levelOne);
     }
     body.appendChild(renderer.view);
     requestAnimFrame(update);

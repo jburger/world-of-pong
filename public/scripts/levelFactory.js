@@ -3,10 +3,10 @@ var levelFactory = (function (colorFactory) {
     return {
         createLevelOneStage: function () {
             var stage = new PIXI.Stage(colorFactory.sceneBackground),
-                bkgTex = PIXI.Texture.fromImage("images/ball.png"),
+                bkgTex = PIXI.Texture.fromImage("images/bkg.lvl.1.png"),
                 ballTex = PIXI.Texture.fromImage("images/ball.png"),
                 paddleTex = PIXI.Texture.fromImage("images/paddle.png"),
-                bkg = new Background(bkgTex, 320, 480),
+                bkg = new Background({texture: bkgTex}),
                 player1 = new Paddle({
                     texture: paddleTex,
                     width: 64,
