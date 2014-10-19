@@ -1,6 +1,7 @@
 
 function Ball(options) {
     'use strict';
+    this.options = options;
     var texture = options.texture || PIXI.Texture.fromImage("images/ball.png");
     
     PIXI.Sprite.call(this, texture, options.width || 16, options.height || 16);
@@ -35,3 +36,11 @@ Ball.prototype.collidedWith = function(other) {
     
     return rightTest && leftTest && topTest && bottomTest;
 };
+
+Ball.prototype.reset = function() {
+    this.position.x = this.options.xloc || 0;
+    this.position.y = this.options.yloc || 0;
+
+    this.speedX = this.options.initialSpeedX || 0;
+    this.speedY = this.options.initialSpeedY || 0;
+}

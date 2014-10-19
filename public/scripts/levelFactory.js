@@ -14,7 +14,7 @@ var levelFactory = (function (colorFactory) {
                     xloc: 160,
                     yloc: 440
                 }),
-                ai = new Paddle({
+                ai = new AI({
                     texture: paddleTex,
                     width: 64,
                     height: 16,
@@ -25,10 +25,10 @@ var levelFactory = (function (colorFactory) {
                     texture: ballTex,
                     width: 16,
                     height: 16,
-                    initialSpeedX: Math.random(),
+                    initialSpeedX: Math.random() < 0.5 ? Math.random() * -1 : Math.random(),
                     initialSpeedY: 5,
                     xloc: 160,
-                    yloc: 240
+                    yloc: 60
                 });
             
             stage.addChild(bkg);

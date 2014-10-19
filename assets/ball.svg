@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="16px"
+   height="16px"
+   id="svg5456"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="ball.svg">
+  <defs
+     id="defs5458" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="22.197802"
+     inkscape:cx="0.97227717"
+     inkscape:cy="8"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:grid-bbox="true"
+     inkscape:document-units="px"
+     inkscape:window-width="1280"
+     inkscape:window-height="897"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid5464" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata5461">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer">
+    <path
+       sodipodi:type="arc"
+       style="fill:#e682ff;fill-opacity:1;fill-rule:nonzero;stroke:#e9069e;stroke-width:1.64707077000000000;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:0.49468085;stroke-dasharray:none;stroke-linecap:round"
+       id="path5466"
+       sodipodi:cx="8"
+       sodipodi:cy="8"
+       sodipodi:rx="6"
+       sodipodi:ry="6"
+       d="m 8.0167863,2.0000235 a 6,6 0 1 1 -0.039444,1.93e-5"
+       sodipodi:start="4.7151867"
+       sodipodi:end="10.991798"
+       inkscape:export-filename="D:\Media\Google Drive\Sprite Theory\wop\public\images\ball.png"
+       inkscape:export-xdpi="90.129997"
+       inkscape:export-ydpi="90.129997"
+       transform="matrix(1.1391727,0,0,1.1279103,-1.1359062,-1.0232832)"
+       sodipodi:open="true" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#f6d4ff;fill-opacity:1;fill-rule:nonzero;stroke:#f7b6ee;stroke-width:2;stroke-miterlimit:4;stroke-opacity:0.4255319;stroke-dasharray:none"
+       id="path5976"
+       sodipodi:cx="6"
+       sodipodi:cy="7"
+       sodipodi:rx="1"
+       sodipodi:ry="1"
+       d="m 6.0093886,6.0000441 a 1,1 0 1 1 -0.00544,-3.63e-5"
+       sodipodi:start="4.7217777"
+       sodipodi:end="10.999526"
+       sodipodi:open="true"
+       transform="translate(-0.09009901,-1.0361386)" />
+  </g>
+</svg>
