@@ -1,0 +1,9 @@
+/* TEAM */
+Code, design, music: Jim Burger
+
+/* THANKS */
+Alpha testers: you know who you are!
+
+/* SITE */
+Last updated: 20141019
+Standards: HTML5, CSS3, WebGL
