@@ -1,0 +1,9 @@
+body {
+    font-family: Helvetica, 'Sans serif';
+}
+
+#game {
+    margin:-10px;
+    height:480px;
+    width:340px;
+}

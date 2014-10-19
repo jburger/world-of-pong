@@ -19,6 +19,6 @@ Paddle.constructor = Paddle;
 Paddle.prototype = Object.create(PIXI.Sprite.prototype);
 Paddle.prototype.update = function (mousePosition) {
     var lastPosX = this.position.x
-    this.position.x = mousePosition.x;
+    //this.position.x = mousePosition.x;
     this.speedX = (this.position.x - lastPosX);
 };

@@ -36,6 +36,13 @@ var levelFactory = (function (colorFactory) {
             stage.addChild(ai);
             stage.addChild(ball);
             stage.setInteractive(true);
+            stage.mousemove = stage.touchmove = function(data) {
+                var lastPosX = player1.position.x
+                player1.position.x = data.global.x;
+                player1.speedX = (player1.position.x + lastPosX);
+                
+            }
+    
             return {
                 stage: stage,
                 ball: ball,

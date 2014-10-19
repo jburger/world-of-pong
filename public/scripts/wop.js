@@ -23,7 +23,7 @@ var app = function (levelFac) {
             var rnd = Math.random();
             ball.speedX += rnd > 0.5 ? rnd : rnd * -1;
             //add some speed from paddle
-            ball.speedX += player1.speedX * 0.1;
+            ball.speedX += player1.speedX * 10;
             
                 
         }
@@ -59,6 +59,7 @@ var app = function (levelFac) {
         score += amount;
     }
     
+ 
     function update() {
         previousTime = currentTime;
         currentTime = Date.now();
