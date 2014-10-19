@@ -21,7 +21,7 @@ Ball.prototype = Object.create(PIXI.Sprite.prototype);
 
 Ball.prototype.update = function () {
     'use strict';
-    this.position.x += this.speedX;
+    this.position.x += this.speedX + 0.01;
     this.position.y += this.speedY;
 };
 
@@ -41,6 +41,9 @@ Ball.prototype.reset = function() {
     this.position.x = this.options.xloc || 0;
     this.position.y = this.options.yloc || 0;
 
-    this.speedX = this.options.initialSpeedX || 0;
+    //if we're going too fast - put the brakes on
+    if(this.speedX > 10) {
+        this.speedX = this.options.initialSpeedX || 0;
+    }
     this.speedY = this.options.initialSpeedY || 0;
 }
