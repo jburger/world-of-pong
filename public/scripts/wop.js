@@ -8,13 +8,28 @@ var app = function (spriteFactory, colorFactory) {
         body = document.getElementById('game');
     
     function detectCollisions(level) {
-        if (ball.collidedWith(player1) || ball.collidedWith(ai)) {
-            console.log('collision detected');
-            level.ball.speedY = level.ball.speedY * -1;
+        var playerHit = ball.collidedWith(player1),
+            aiHit = ball.collidedWith(ai);
+        
+        if (playerHit || aiHit) {
+            //reverse direction
+            ball.speedY = (ball.speedY) * -1;
         }
+        
+        //did the paddle impart some lateral velocity on the ball?
+        var impartedLateralVelocity = 0;
+        if(playerHit) {
+            impartedLateralVelocity = player1.speedX;
+        }
+        
+        if(aiHit) {
+            impartedLateralVelocity = ai.speedX;
+        }
+        //ball.speedX += impartedLateralVelocity;
     }
     
     function update() {
+        var currentTime = 
         requestAnimFrame(update);
         renderer.render(levelOne.stage);
         ball.update();

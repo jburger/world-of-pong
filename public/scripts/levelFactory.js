@@ -25,8 +25,8 @@ var levelFactory = (function (colorFactory) {
                     texture: ballTex,
                     width: 16,
                     height: 16,
-                    initialSpeedX: 0,
-                    initialSpeedY: Math.random * 5,
+                    initialSpeedX: Math.random(),
+                    initialSpeedY: 5,
                     xloc: 160,
                     yloc: 240
                 });
