@@ -26,7 +26,7 @@ var levelFactory = (function (colorFactory) {
                     width: 16,
                     height: 16,
                     initialSpeedX: 0,
-                    initialSpeedY: 1,
+                    initialSpeedY: Math.random * 5,
                     xloc: 160,
                     yloc: 240
                 });

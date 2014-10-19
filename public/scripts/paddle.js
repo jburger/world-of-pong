@@ -11,6 +11,9 @@ function Paddle(options) {
 
     this.position.x = options.xloc || 0;
     this.position.y = options.yloc || 0;
+    
+    this.hitArea = new PIXI.Rectangle(options.xloc || 0, options.yloc || 0, options.width || 32, options.height || 8);
+    
     this.setInteractive(true);
     
 }

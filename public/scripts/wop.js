@@ -8,7 +8,8 @@ var app = function (spriteFactory, colorFactory) {
         body = document.getElementById('game');
     
     function detectCollisions(level) {
-        if (level.ball.didCollide(level.player1) ) {
+        if (ball.collidedWith(player1) || ball.collidedWith(ai)) {
+            console.log('collision detected');
             level.ball.speedY = level.ball.speedY * -1;
         }
     }
