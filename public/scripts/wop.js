@@ -18,13 +18,10 @@ var app = function (levelFac) {
             aiHit = ball.collidedWith(ai);
         
         if (playerHit || aiHit) {
-            ball.speedY = -ball.speedY;
-            var rnd = Math.random();
-            ball.speedX += rnd > 0.5 ? rnd : rnd * -1;
-            ball.speedY < 0 ? ball.speedY -= 0.1 : ball.speedY += 0.1 ;
-            if(ball.speedY > 20 ) { ball.speedY = 20; }
-            
-                
+            ball.speedY = -ball.speedY; // reverse direction
+            ball.speedX += player1.speedX * 0.5; // add some of players x velocity to ball
+            ball.speedY < 0 ? ball.speedY -= 0.1 : ball.speedY += 0.1 ; // increase speed
+            if(ball.speedY > 20 ) { ball.speedY = 20; } // capped at '20'
         }
         
         //check wall hits
