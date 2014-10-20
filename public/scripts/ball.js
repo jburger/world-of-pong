@@ -29,10 +29,10 @@ Ball.prototype.collidedWith = function(other) {
     var myBounds = this.hitArea;
     var theirBounds = other.hitArea;
     
-    var rightTest = this.position.x + myBounds.width/2  > other.position.x - theirBounds.width/2;
-    var leftTest = this.position.x - myBounds.width/2  < other.position.x + theirBounds.width/2;
-    var topTest = this.position.y + myBounds.height/2  > other.position.y - theirBounds.height/2;
-    var bottomTest = this.position.y - myBounds.height/2  < other.position.y + theirBounds.height/2;
+    var rightTest = this.position.x + myBounds.width/2  > other.lastPosX - theirBounds.width/2;
+    var leftTest = this.position.x - myBounds.width/2  < other.lastPosX + theirBounds.width/2;
+    var topTest = this.position.y + myBounds.height/2  > other.lastPosY - theirBounds.height/2;
+    var bottomTest = this.position.y - myBounds.height/2  < other.lastPosY + theirBounds.height/2;
     
     return rightTest && leftTest && topTest && bottomTest;
 };

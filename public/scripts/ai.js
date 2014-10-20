@@ -10,22 +10,21 @@ function AI(options) {
     this.position.y = options.yloc || 0;
     
     this.hitArea = new PIXI.Rectangle(options.xloc || 0, options.yloc || 0, options.width || 64, options.height || 16);
-
+    this.difficulty = options.difficulty || 160;
 }
 
 AI.constructor = AI;
 AI.prototype = Object.create(PIXI.Sprite.prototype);
+AI.prototype.lastPosX = 0;
+AI.prototype.lastPosY = 0;
 
 AI.prototype.update = function (ballPosition) {
     var lastPosX = this.position.x
-    var doSomethingStupid = Math.random() > 0.95;
     
-    if(ballPosition.y < 160) {
-        if(doSomethingStupid) {
-            //do nothing
-        } else {
+    this.lastPosX = this.position.x;
+    this.lastPosY = this.position.y;  
+     
+    if(ballPosition.y < this.difficulty) {
             this.position.x = math.lerp(this.position.x, ballPosition.x, 0.1);;
-        }
-        
     }
 };

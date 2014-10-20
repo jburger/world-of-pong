@@ -18,7 +18,9 @@ function Paddle(options) {
 Paddle.constructor = Paddle;
 Paddle.prototype = Object.create(PIXI.Sprite.prototype);
 Paddle.prototype.lastPosX = 0;
+Paddle.prototype.lastPosY = 0;
 Paddle.prototype.update = function () {
     this.speedX = (this.position.x - this.lastPosX);
-    this.lastPosX = this.position.x
+    this.lastPosX = this.position.x;
+    this.lastPosY = this.position.y;
 };
