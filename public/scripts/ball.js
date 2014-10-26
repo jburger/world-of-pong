@@ -10,7 +10,8 @@ function Ball(options) {
 
     this.position.x = options.xloc || 0;
     this.position.y = options.yloc || 0;
-
+    this.lastPosition = this.position;
+    
     this.speedX = options.initialSpeedX || 0;
     this.speedY = options.initialSpeedY || 0;
     this.hitArea = new PIXI.Rectangle(options.xloc || 0, options.yloc || 0, options.width || 16, options.height || 16);
@@ -26,18 +27,22 @@ Ball.prototype.update = function () {
 };
 
 Ball.prototype.collidedWith = function(other) {
-    var myBounds = this.hitArea;
-    var theirBounds = other.hitArea;
+    var wePos = this.position;
+    var theyPos = other.position;
+    var theyWidth = other.hitArea.width;
+    var theyHeight = other.hitArea.height;
     
-    var rightTest = this.position.x + myBounds.width/2  > other.lastPosX - theirBounds.width/2;
-    var leftTest = this.position.x - myBounds.width/2  < other.lastPosX + theirBounds.width/2;
-    var topTest = this.position.y + myBounds.height/2  > other.lastPosY - theirBounds.height/2;
-    var bottomTest = this.position.y - myBounds.height/2  < other.lastPosY + theirBounds.height/2;
-    
+    var leftTest = wePos.x > (theyPos.x - theyWidth/2),
+        rightTest = wePos.x < (theyPos.x + theyWidth/2),
+        topTest = wePos.y > (theyPos.y - theyHeight/2),
+        bottomTest = wePos.y < (theyPos.y + theyHeight/2);
+
     return rightTest && leftTest && topTest && bottomTest;
 };
 
 Ball.prototype.reset = function() {
+    this.lastPosition.x = this.position.x;
+    this.lastPosition.y = this.position.y;
     this.position.x = this.options.xloc || 0;
     this.position.y = this.options.yloc || 0;
 

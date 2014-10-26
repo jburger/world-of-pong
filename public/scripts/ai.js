@@ -15,15 +15,8 @@ function AI(options) {
 
 AI.constructor = AI;
 AI.prototype = Object.create(PIXI.Sprite.prototype);
-AI.prototype.lastPosX = 0;
-AI.prototype.lastPosY = 0;
 
 AI.prototype.update = function (ballPosition) {
-    var lastPosX = this.position.x
-    
-    this.lastPosX = this.position.x;
-    this.lastPosY = this.position.y;  
-     
     if(ballPosition.y < this.difficulty) {
             this.position.x = math.lerp(this.position.x, ballPosition.x, 0.1);;
     }

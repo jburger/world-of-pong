@@ -1,4 +1,4 @@
-function UiText(options) {
+function FloatingText(options) {
     var fontOptions = "";
     switch(options.size) {
         case "small":
@@ -18,7 +18,8 @@ function UiText(options) {
     this.position.y = options.yloc || 0;
 }
 
-UiText.constructor = UiText;
-UiText.prototype = Object.create(PIXI.Text.prototype);
-UiText.prototype.update = function (mousePosition) {
+FloatingText.constructor = FloatingText;
+FloatingText.prototype = Object.create(PIXI.Text.prototype);
+FloatingText.prototype.update = function () {
+    
 };
