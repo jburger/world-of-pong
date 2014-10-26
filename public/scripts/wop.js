@@ -25,6 +25,15 @@ var app = function (levelFac) {
         if (score < 0) {
             score = 0;
         }
+        var scoreText = new FloatingText({
+            xloc: ball.position.x,
+            yloc: ball.position.y,
+            color: "#f2cff2",
+            size: "medium",
+            message: amount
+        });
+        level.stage.addChild(scoreText);
+       
     }
     
     
@@ -52,12 +61,6 @@ var app = function (levelFac) {
         //check score
         if (playerHit) {
             if (player1.speedX > 1) {
-                new FloatingText({
-                    xLoc: ball.lastPosition.x,
-                    yLoc: ball.lastPosition.y,
-                    color: yellow,
-                    size: small
-                });
                 addPointsToScore(10);
             } else {
                 addPointsToScore(5);
@@ -88,17 +91,23 @@ var app = function (levelFac) {
     }
     
     function update() {
-        //previousTime = currentTime;
-        //currentTime = Date.now();
-        //deltaTime = currentTime - previousTime;
-        
         requestAnimFrame(update);
         renderer.render(level.stage);
-        ball.update();
-        player1.update();
-        ai.update(ball.position, deltaTime);
-        detectCollisions();
+        //ball.update();
+        //player1.update();
+        var type = "";
+        var len = level.stage.children.length;
+        for (var i = 0; i < len; i++) {
+            var displayObj = level.stage.children[i];
+            try {
+                displayObj.update(); 
+            } catch(e) {
+            }
+        }
+        
         scoreText.setText("score: " + score);
+        detectCollisions();
+        
         if(diagnosticMode) {
             renderDiagnostics({
                 player1Pos: player1.position,

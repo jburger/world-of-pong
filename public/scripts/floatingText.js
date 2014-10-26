@@ -21,5 +21,11 @@ function FloatingText(options) {
 FloatingText.constructor = FloatingText;
 FloatingText.prototype = Object.create(PIXI.Text.prototype);
 FloatingText.prototype.update = function () {
-    
+  this.position.x += 0.1 * Math.random();  
+  this.position.y += 0.1 * Math.random();  
+  if (this.alpha === 0) {
+    this.destroy();
+  } else {
+    this.alpha -= 0.01;
+  }
 };

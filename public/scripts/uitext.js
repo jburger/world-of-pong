@@ -20,5 +20,3 @@ function UiText(options) {
 
 UiText.constructor = UiText;
 UiText.prototype = Object.create(PIXI.Text.prototype);
-UiText.prototype.update = function (mousePosition) {
-};
