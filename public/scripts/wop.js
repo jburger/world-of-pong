@@ -28,7 +28,7 @@ var app = function (levelFac) {
         var scoreText = new FloatingText({
             xloc: ball.position.x,
             yloc: ball.position.y,
-            color: "#f2cff2",
+            color: "#59e53f",
             size: "medium",
             message: amount
         });

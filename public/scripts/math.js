@@ -6,7 +6,7 @@ var math = (function() {
         },
         
         rand: function(lower, upper) {
-            return Math.random() * (lower, upper) + lower;
+            return Math.random() * (upper - lower) + lower;
         }
     }
 })();
