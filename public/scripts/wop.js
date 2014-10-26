@@ -60,10 +60,11 @@ var app = function (levelFac) {
         
         //check score
         if (playerHit) {
+            var absSpeed = Math.floor(Math.abs(ball.speedY));
             if (player1.speedX > 1) {
-                addPointsToScore(10);
+                addPointsToScore(2 * absSpeed);
             } else {
-                addPointsToScore(5);
+                addPointsToScore(absSpeed);
             }
         }
         
@@ -102,9 +103,10 @@ var app = function (levelFac) {
             try {
                 displayObj.update(); 
             } catch(e) {
+                //bad code
             }
         }
-        
+        ai.update(ball.position);
         scoreText.setText("score: " + score);
         detectCollisions();
         

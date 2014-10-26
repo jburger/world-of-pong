@@ -21,8 +21,8 @@ function FloatingText(options) {
 FloatingText.constructor = FloatingText;
 FloatingText.prototype = Object.create(PIXI.Text.prototype);
 FloatingText.prototype.update = function () {
-  this.position.x += 0.1 * Math.random();  
-  this.position.y += 0.1 * Math.random();  
+  this.position.x += math.rand(-0.1, 0.1);  
+  this.position.y += math.rand(-0.1, 0.1);  
   if (this.alpha === 0) {
     this.destroy();
   } else {

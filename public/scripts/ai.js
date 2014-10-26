@@ -10,14 +10,15 @@ function AI(options) {
     this.position.y = options.yloc || 0;
     
     this.hitArea = new PIXI.Rectangle(options.xloc || 0, options.yloc || 0, options.width || 64, options.height || 16);
-    this.difficulty = options.difficulty || 160;
+    this.difficulty = options.difficulty || 0.5;
 }
 
 AI.constructor = AI;
 AI.prototype = Object.create(PIXI.Sprite.prototype);
 
 AI.prototype.update = function (ballPosition) {
-    if(ballPosition.y < this.difficulty) {
-            this.position.x = math.lerp(this.position.x, ballPosition.x, 0.1);;
+    if(ballPosition.y < 480 * this.difficulty) {
+        this.position.x = math.lerp(this.position.x, ballPosition.x, 0.1);
     }
+    this.difficulty += (this.difficulty < 1) ? 0.00001 : 0;
 };
